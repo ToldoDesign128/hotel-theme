@@ -1,0 +1,17 @@
+header {
+  .is-active {
+    span {
+      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: rotate(45deg) translate(5px, 5px);
+      &:last-child {
+        transform: rotate(-45deg) translate(5px, -4px);
+      }
+    }
+  }
+  #menu {
+    transform: translateX(100%);
+    &.open {
+      transform: translateY(0);
+    }
+  }
+}

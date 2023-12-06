@@ -6,7 +6,7 @@ require('mix-tailwindcss');
 mix.sass('assets/sass/style.scss', 'style.css')
   .tailwind('tailwind.config.js');
 
-mix.combine(['assets/js/dark-mode.js','assets/js/hamburger.js'], 'main.js')
+mix.combine(['assets/js/animation.js','assets/js/hamburger.js'], 'main.js')
   .minify('main.js');
 
 mix.webpackConfig({

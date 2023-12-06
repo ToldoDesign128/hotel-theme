@@ -1,4 +1,4 @@
-
+// Animation
 //Hamburger menu
 jQuery("#hamburgerButton").click(function () {
     jQuery("#hamburgerButton").toggleClass("is-active");

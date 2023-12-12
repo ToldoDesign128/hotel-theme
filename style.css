@@ -494,14 +494,14 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
 .mt-3 {
   margin-top: 0.75rem;
-}
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 .flex {
   display: flex;
@@ -527,9 +527,6 @@ video {
 .w-full {
   width: 100%;
 }
-.w-8\/12 {
-  width: 66.666667%;
-}
 .flex-col {
   flex-direction: column;
 }
@@ -553,9 +550,6 @@ video {
 }
 .scroll-smooth {
   scroll-behavior: smooth;
-}
-.rounded-full {
-  border-radius: 9999px;
 }
 .border {
   border-width: 1px;
@@ -599,6 +593,10 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -607,23 +605,11 @@ video {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
 .pt-8 {
   padding-top: 2rem;
 }
 .text-center {
   text-align: center;
-}
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 .text-6xl {
   font-size: 3.75rem;
@@ -684,15 +670,29 @@ header #menu nav ul li {
     color: rgb(245, 245, 244);
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(68, 64, 60);
+  border-left: rgb(28, 25, 23);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(120, 113, 108);
+  border-left: rgb(245, 245, 244);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(214, 211, 209);
+}
 .group:hover .group-hover\:text-stone-100 {
   --tw-text-opacity: 1;
   color: rgb(245 245 244 / var(--tw-text-opacity));
-}
-@media (min-width: 768px) {
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 @media (min-width: 1024px) {
   .lg\:flex {

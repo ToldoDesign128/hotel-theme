@@ -7,7 +7,7 @@
     <meta name="viewport" content="<?php echo esc_attr($viewport_content); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#ff3333">
+    <meta name="theme-color" content="#1c1917">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <title>
         <?php if (is_archive()) {
@@ -44,7 +44,7 @@
                 <div id="hamburgerButton" class="group lg:w-3/12 w-auto flex items-center justify-end">
                     <p id="menuOpen" class="lg:flex hidden text-stone-300 group-hover:text-stone-100">Menu</p>
                     <p id="menuClose" class="hidden text-stone-300 group-hover:text-stone-100">Close</p>
-                    <button title="Menu Button" class="py-4 px-[.5rem] ml-3 bg-transparent lg:group-hover:bg-stone-100 border lg:group-hover:ml-5 border-stone-100 rounded-full transition-all duration-300">
+                    <button title="Menu Button" class="py-4 px-[.5rem] ml-3 bg-transparent lg:group-hover:bg-stone-100 border lg:group-hover:ml-5 border-stone-100 transition-all duration-300">
                         <span class="flex h-px w-8 bg-stone-100 lg:group-hover:bg-stone-900"></span>
                         <span class="flex h-px w-8 mt-3 bg-stone-100 lg:group-hover:bg-stone-900"></span>
                     </button>

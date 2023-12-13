@@ -51,7 +51,10 @@
                 </div>
             </div>
         </div>
-        <div id="menu" class="absolute flex flex-col justify-center top-0 right-0 lg:w-1/2 w-full h-screen overflow-x-hidden bg-stone-800 z-30 px-8 transition-all duration-500">
+        <div id="menu" class="absolute flex flex-col lg:justify-center justify-between top-0 right-0 lg:w-1/2 w-full h-screen overflow-x-hidden bg-stone-800 z-30 px-8 transition-all duration-500">
+            <!-- Spacers     -->
+            <div class="h-20"></div>
+            <!-- Menu Nav -->
             <nav class="w-full lg:text-right text-center mb-6">
                 <?php
                 wp_nav_menu(array(
@@ -62,17 +65,14 @@
                 ));
                 ?>
             </nav>
-            <!-- Cta -->
-            <div class="lg:w-3/12 w-full lg:hidden flex lg:justify-start justify-center pt-8">
-                <a href="#" class="w-full text-center uppercase tracking-wider text-stone-100 lg:hover:text-stone-900 border bg-transparent lg:hover:bg-stone-100 border-stone-100 py-3 px-5 transition-all duration-300">
-                    Prenota ora
-                </a>
-            </div>
-            <!-- Cta -->
-            <div class="lg:w-3/12 w-full lg:hidden flex lg:justify-start justify-center pt-8">
-                <a href="#" class="w-full text-center uppercase tracking-wider text-stone-100 lg:hover:text-stone-900 border bg-transparent lg:hover:bg-stone-100 border-stone-100 py-3 px-5 transition-all duration-300">
-                    Chiedei un preventivo
-                </a>
+                <!-- Cta -->
+            <div class="lg:w-3/12 w-full lg:hidden flex flex-col gap-8 lg:justify-start justify-center mb-8">
+                    <a href="#" class="w-full text-center uppercase tracking-wider text-stone-100 lg:hover:text-stone-900 border bg-transparent lg:hover:bg-stone-100 border-stone-100 py-3 px-5 transition-all duration-300">
+                        Prenota ora
+                    </a>
+                    <a href="#" class="w-full text-center uppercase tracking-wider text-stone-100 lg:hover:text-stone-900 border bg-transparent lg:hover:bg-stone-100 border-stone-100 py-3 px-5 transition-all duration-300">
+                        Chiedei un preventivo
+                    </a>
             </div>
 
         </div>

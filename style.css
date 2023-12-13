@@ -490,6 +490,15 @@ video {
 .z-50 {
   z-index: 50;
 }
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -497,14 +506,14 @@ video {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
 .mt-3 {
   margin-top: 0.75rem;
-}
-.mb-8 {
-  margin-bottom: 2rem;
 }
 .flex {
   display: flex;
@@ -512,20 +521,20 @@ video {
 .hidden {
   display: none;
 }
+.h-20 {
+  height: 5rem;
+}
 .h-px {
   height: 1px;
 }
 .h-screen {
   height: 100vh;
 }
-.h-12 {
-  height: 3rem;
-}
-.h-20 {
-  height: 5rem;
-}
 .max-h-12 {
   max-height: 3rem;
+}
+.w-10\/12 {
+  width: 83.333333%;
 }
 .w-8 {
   width: 2rem;
@@ -539,8 +548,14 @@ video {
 .flex-col {
   flex-direction: column;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .items-center {
   align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
 }
 .justify-start {
   justify-content: flex-start;
@@ -556,6 +571,12 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
 }
 .overflow-x-hidden {
   overflow-x: hidden;
@@ -601,6 +622,10 @@ video {
   padding-left: .5rem;
   padding-right: .5rem;
 }
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -617,15 +642,32 @@ video {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
-.pt-8 {
-  padding-top: 2rem;
+.pb-8 {
+  padding-bottom: 2rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
 }
 .text-center {
   text-align: center;
 }
+.align-baseline {
+  vertical-align: baseline;
+}
+.align-bottom {
+  vertical-align: bottom;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-semibold {
   font-weight: 600;
@@ -647,6 +689,13 @@ video {
 .text-stone-300 {
   --tw-text-opacity: 1;
   color: rgb(214 211 209 / var(--tw-text-opacity));
+}
+.text-stone-500 {
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity));
+}
+.opacity-60 {
+  opacity: 0.6;
 }
 .transition-all {
   transition-property: all;
@@ -683,6 +732,17 @@ header #menu nav ul li {
   }
 }
 
+footer nav ul li {
+  padding: 0.5rem 0;
+  color: rgb(120, 113, 108);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@media (min-width : 1024px) {
+  footer nav ul li:hover {
+    color: rgb(245, 245, 244);
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
@@ -706,7 +766,21 @@ header #menu nav ul li {
   --tw-text-opacity: 1;
   color: rgb(245 245 244 / var(--tw-text-opacity));
 }
+@media (min-width: 768px) {
+  .md\:w-1\/6 {
+    width: 16.666667%;
+  }
+}
 @media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+  .lg\:order-3 {
+    order: 3;
+  }
+  .lg\:order-2 {
+    order: 2;
+  }
   .lg\:flex {
     display: flex;
   }
@@ -716,8 +790,17 @@ header #menu nav ul li {
   .lg\:w-1\/2 {
     width: 50%;
   }
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
   .lg\:w-3\/12 {
     width: 25%;
+  }
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+  .lg\:w-8\/12 {
+    width: 66.666667%;
   }
   .lg\:justify-start {
     justify-content: flex-start;
@@ -725,8 +808,15 @@ header #menu nav ul li {
   .lg\:justify-center {
     justify-content: center;
   }
+  .lg\:text-left {
+    text-align: left;
+  }
   .lg\:text-right {
     text-align: right;
+  }
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
   .lg\:text-7xl {
     font-size: 4.5rem;
@@ -739,6 +829,10 @@ header #menu nav ul li {
   .lg\:hover\:tracking-wide:hover {
     letter-spacing: 0.025em;
   }
+  .lg\:hover\:text-stone-200:hover {
+    --tw-text-opacity: 1;
+    color: rgb(231 229 228 / var(--tw-text-opacity));
+  }
   .lg\:hover\:text-stone-300:hover {
     --tw-text-opacity: 1;
     color: rgb(214 211 209 / var(--tw-text-opacity));
@@ -746,6 +840,9 @@ header #menu nav ul li {
   .lg\:hover\:text-stone-900:hover {
     --tw-text-opacity: 1;
     color: rgb(28 25 23 / var(--tw-text-opacity));
+  }
+  .lg\:hover\:opacity-80:hover {
+    opacity: 0.8;
   }
   .group:hover .lg\:group-hover\:ml-5 {
     margin-left: 1.25rem;
@@ -760,6 +857,10 @@ header #menu nav ul li {
   }
 }
 @media (min-width: 1536px) {
+  .\32xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
   .\32xl\:text-8xl {
     font-size: 6rem;
     line-height: 1;

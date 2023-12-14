@@ -90,6 +90,13 @@ add_action('init', function () {
 	}
 });
 
+// Remove the content editor from ALL pages
+add_action('admin_head', 'remove_content_editor');
+function remove_content_editor()
+{ 
+    remove_post_type_support('page', 'editor');        
+}
+
 /*ADD ACF Option Page*/
 if (function_exists('acf_add_options_page')) {
 	acf_add_options_page(array(

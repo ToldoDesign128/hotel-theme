@@ -1,18 +1,22 @@
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: $stone-700;
-  border-left: $stone-900;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $stone-500;
-  border-left: $stone-100;
-
-  &:hover {
-    background: $stone-300;
+@media #{$lg} {
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $stone-700;
+    border-left: $stone-900;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $stone-500;
+    border-left: $stone-100;
+  
+    &:hover {
+      background: $stone-300;
+    }
   }
 }
+

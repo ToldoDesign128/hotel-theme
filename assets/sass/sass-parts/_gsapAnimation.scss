@@ -1,0 +1,12 @@
+#hero{
+    .textContainer{
+        .heroAnimation1,.heroAnimation2,.heroAnimation3{
+            opacity: 0;
+            transform: translateY(200px);
+
+            &:last-child{
+                transform: translateY(100px);
+            }
+        }
+    }
+}

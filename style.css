@@ -552,6 +552,12 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[50vh\] {
+  height: 50vh;
+}
+.h-\[30vh\] {
+  height: 30vh;
+}
 .max-h-12 {
   max-height: 3rem;
 }
@@ -570,6 +576,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .flex-col {
   flex-direction: column;
@@ -597,6 +606,9 @@ video {
 }
 .self-end {
   align-self: flex-end;
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 .overflow-x-hidden {
   overflow-x: hidden;
@@ -833,6 +845,12 @@ footer nav ul li {
   .lg\:order-3 {
     order: 3;
   }
+  .lg\:mt-16 {
+    margin-top: 4rem;
+  }
+  .lg\:mt-8 {
+    margin-top: 2rem;
+  }
   .lg\:flex {
     display: flex;
   }
@@ -844,6 +862,9 @@ footer nav ul li {
   }
   .lg\:h-screen {
     height: 100vh;
+  }
+  .lg\:h-\[50vh\] {
+    height: 50vh;
   }
   .lg\:w-1\/2 {
     width: 50%;
@@ -857,6 +878,9 @@ footer nav ul li {
   .lg\:w-8\/12 {
     width: 66.666667%;
   }
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -868,6 +892,9 @@ footer nav ul li {
   }
   .lg\:pl-24 {
     padding-left: 6rem;
+  }
+  .lg\:pl-32 {
+    padding-left: 8rem;
   }
   .lg\:text-left {
     text-align: left;

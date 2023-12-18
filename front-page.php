@@ -1,7 +1,7 @@
 <?php get_header();
 $page_id = get_queried_object_id(); ?>
 <!-- Hero -->
-<section id="hero" class="w-full lg:h-screen h-auto flex lg:flex-row flex-wrap overflow-x-hidden">
+<section id="hero" class="w-full lg:h-screen h-auto flex lg:flex-row flex-wrap overflow-hidden">
     <?php if (have_rows('section_1')) : ?>
         <?php while (have_rows('section_1')) : the_row();
 
@@ -26,7 +26,7 @@ $page_id = get_queried_object_id(); ?>
                         $hero_pulsante_target = $hero_pulsante['target'] ? $hero_pulsante['target'] : '_self';
                     ?>
 
-                        <div class="heroAnimation1 py-4">
+                        <div class="heroAnimation1 py-4 lg:mt-16">
                             <h1 class="font-serif 2xl:text-8xl lg:text-7xl text-6xl text-stone-200">
                                 <?php echo esc_html($hero_title); ?>
                             </h1>
@@ -44,6 +44,45 @@ $page_id = get_queried_object_id(); ?>
                 <?php endif; ?>
             </div>
 
+        <?php
+        endwhile; ?>
+    <?php endif; ?>
+</section>
+
+<!-- Section 2 -->
+<section class="animationContainer w-full lg:h-screen h-auto flex lg:flex-row flex-wrap overflow-hidden">
+    <?php if (have_rows('sezione_2')) : ?>
+        <?php while (have_rows('sezione_2')) : the_row();
+        ?>
+            <!-- Hero text -->
+            <div class="textAnimation lg:w-1/2 lg:h-full h-auto w-full flex flex-col justify-center lg:pl-32 px-6 py-24 lg:order-1 order-2">
+                <div class="heroAnimation2 lg:w-10/12 w-full lg:text-2xl text-xl py-4 text-stone-400">
+                    <?php echo the_sub_field('testo_sezione_2'); ?>
+                </div>
+            </div>
+
+            <!-- Hero text -->
+            <div class="imageAnimationContainer lg:w-1/2 lg:h-full w-full flex flex-col lg:order-2 order-1">
+                <?php if (have_rows('immagini_sezione_2')) :
+                    while (have_rows('immagini_sezione_2')) : the_row();
+
+                        $imageUno = get_sub_field('immagine_1');
+                        $imageDue = get_sub_field('immagine_2');
+                        $size = 'full';
+
+                        if (!empty($imageUno)) : ?>
+                            <div class="w-full lg:h-[50vh] h-[30vh] overflow-hidden">
+                                <img class="imageAnimation w-full h-full object-cover" src="<?php echo esc_url($imageUno['url']); ?>" alt="<?php echo esc_attr($imageUno['alt']); ?>" />
+                            </div>
+                            <div class="w-full lg:h-[50vh] h-[30vh] overflow-hidden">
+                                <img class="imageAnimation w-full h-full object-cover" src="<?php echo esc_url($imageDue['url']); ?>" alt="<?php echo esc_attr($imageDue['alt']); ?>" />
+                            </div>
+                        <?php endif; ?>
+
+                    <?php
+                    endwhile; ?>
+                <?php endif; ?>
+            </div>
         <?php
         endwhile; ?>
     <?php endif; ?>

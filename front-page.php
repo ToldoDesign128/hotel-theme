@@ -54,14 +54,14 @@ $page_id = get_queried_object_id(); ?>
     <?php if (have_rows('sezione_2')) : ?>
         <?php while (have_rows('sezione_2')) : the_row();
         ?>
-            <!-- Hero text -->
+            <!-- Section 2 text -->
             <div class="textAnimation lg:w-1/2 lg:h-full h-auto w-full flex flex-col justify-center lg:pl-32 px-6 py-24 lg:order-1 order-2">
                 <div class="heroAnimation2 lg:w-10/12 w-full lg:text-2xl text-xl py-4 text-stone-400">
                     <?php echo the_sub_field('testo_sezione_2'); ?>
                 </div>
             </div>
 
-            <!-- Hero text -->
+            <!-- Section 2 text -->
             <div class="imageAnimationContainer lg:w-1/2 lg:h-full w-full flex flex-col lg:order-2 order-1">
                 <?php if (have_rows('immagini_sezione_2')) :
                     while (have_rows('immagini_sezione_2')) : the_row();
@@ -72,10 +72,10 @@ $page_id = get_queried_object_id(); ?>
 
                         if (!empty($imageUno)) : ?>
                             <div class="w-full lg:h-[50vh] h-[30vh] overflow-hidden">
-                                <img class="imageAnimation w-full h-full object-cover" src="<?php echo esc_url($imageUno['url']); ?>" alt="<?php echo esc_attr($imageUno['alt']); ?>" />
+                                <img class="imageAnimationUno w-full h-full object-cover" src="<?php echo esc_url($imageUno['url']); ?>" alt="<?php echo esc_attr($imageUno['alt']); ?>" />
                             </div>
                             <div class="w-full lg:h-[50vh] h-[30vh] overflow-hidden">
-                                <img class="imageAnimation w-full h-full object-cover" src="<?php echo esc_url($imageDue['url']); ?>" alt="<?php echo esc_attr($imageDue['alt']); ?>" />
+                                <img class="imageAnimationDue w-full h-full object-cover" src="<?php echo esc_url($imageDue['url']); ?>" alt="<?php echo esc_attr($imageDue['alt']); ?>" />
                             </div>
                         <?php endif; ?>
 
@@ -88,4 +88,31 @@ $page_id = get_queried_object_id(); ?>
     <?php endif; ?>
 </section>
 
+<!-- Section 3 -->
+<section class="animationContainerDue w-full lg:h-screen h-auto flex lg:flex-row flex-wrap overflow-hidden">
+    <?php if (have_rows('sezione_3')) : ?>
+        <?php while (have_rows('sezione_3')) : the_row();
+        ?>
+            <!-- Section 3 text -->
+            <div class="imageAnimationContainer lg:w-1/2 lg:h-full w-full flex flex-col">
+                <?php $imageTre = get_sub_field('immagine_3');
+                if (!empty($imageTre)) : ?>
+                    <div class="w-full lg:h-full h-[40vh] overflow-hidden">
+                        <img class="imageAnimationTre w-full h-full object-cover" src="<?php echo esc_url($imageTre['url']); ?>" alt="<?php echo esc_attr($imageTre['alt']); ?>" />
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <!-- Section 3 text -->
+            <div class="textAnimation lg:w-1/2 lg:h-full h-auto w-full flex flex-col justify-center lg:pl-32 px-6 py-24">
+                <div class="lg:w-10/12 w-full lg:text-2xl text-xl py-4 text-stone-400">
+                    <?php echo the_sub_field('testo_sezione_3'); ?>
+                </div>
+            </div>
+
+
+        <?php
+        endwhile; ?>
+    <?php endif; ?>
+</section>
 <?php get_footer(); ?>

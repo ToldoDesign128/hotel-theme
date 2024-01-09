@@ -6,6 +6,7 @@ module.exports = {
     "front-page.php",
     "header.php",
     "index.php",
+    "page.php",
     "/template-parts/*.{html,js,php}",
     "/page-template/*.{html,js,php}"
 ],
